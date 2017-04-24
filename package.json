@@ -1,0 +1,12 @@
+{
+  "name": "wasm-shape-api",
+  "version": "1.0.0",
+  "description": "A Shape API polyfill using WASM",
+  "main": "index.js",
+  "repository": "https://github.com/MarkBennett/wasm-shape-api.git",
+  "author": "Mark Bennett <mark@burmis.ca>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^2.2.2"
+  }
+}

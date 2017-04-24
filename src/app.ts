@@ -1,9 +1,14 @@
 const img = <HTMLImageElement>document.getElementById("sample");
-const canvas = document.createElement('canvas');
-const context = canvas.getContext('2d');
+const imgLoadHandler = (e) => {
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
 
-canvas.width = img.width;
-canvas.height = img.height;
-context.drawImage(img, 0, 0 );
+    canvas.width = img.width;
+    canvas.height = img.height;
+    context.drawImage(img, 0, 0 );
 
-const imgData = context.getImageData(0, 0, img.width, img.height);
+    const imgData = context.getImageData(0, 0, img.width, img.height);
+    console.dir(imgData);
+};
+img.onload = imgLoadHandler;
+img.src = "imgs/soccer-ball.jpg";

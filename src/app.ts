@@ -12,3 +12,8 @@ const imgLoadHandler = (e) => {
 };
 img.onload = imgLoadHandler;
 img.src = "imgs/soccer-ball.jpg";
+
+Module.addOnInit(() => {
+    int_sqrt = Module.cwrap('int_sqrt', 'number', ['number'])
+    console.log(int_sqrt(48));    
+});

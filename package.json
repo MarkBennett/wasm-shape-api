@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build:js": "node_modules/.bin/tsc",
-    "build:cpp": "(cd cpp && emcc shape.cpp -o shape.js -s EXPORTED_FUNCTIONS=\"['_int_sqrt']\")",
+    "build:cpp": "(emcc cpp/shape.cpp -o shape.js -s WASM=1 -s EXPORTED_FUNCTIONS=\"['_int_sqrt']\")",
     "build:quirc": "(cd quirc && emmake make libquirc.so -s WASM=1)",
     "watch": "node_modules/.bin/tsc --watch",
     "serve": "python -m SimpleHTTPServer 8000"

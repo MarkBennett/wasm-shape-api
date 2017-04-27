@@ -8,5 +8,10 @@
   "license": "MIT",
   "devDependencies": {
     "typescript": "^2.2.2"
+  },
+  "scripts": {
+    "build": "node_modules/.bin/tsc",
+    "watch": "node_modules/.bin/tsc --watch",
+    "serve": "python -m SimpleHTTPServer 8000"
   }
 }
